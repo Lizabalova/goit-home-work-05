@@ -373,7 +373,7 @@
             </form>
             </div>
             </div>
-            </div>
+            
         </footer>
 
 
@@ -387,42 +387,101 @@
                 <p class="backdrop-text">Leave your contacts and we will call you back </p>
                 <form class="form">
                 <div class="backdrop-container">
-                    <label class="backdrop-label"> Name </label>
+                    <label class="backdrop-label" for="user-name">Name</label>
                     <div class="backdrop-input">
-                        <input class="form-input" name="user"/>
-                        <svg class="backdrop-items" width="18" height="18">
+                        <input 
+                        class="form-input"
+                        id="user-name"
+                        name="user-name"
+                        type="text"
+                        pattern="[a-zA-Zа-яА-ЯіІїЇєЄґҐʼ]+"
+                        required
+                        />
+                        <svg 
+                        class="backdrop-items" 
+                        width="18" 
+                        height="18"
+                        aria-label="icon-user"
+                        >
                             <use href="./images/icons.svg#icon-personblack"></use></svg>
                 </div>
             </div>
             <div class="backdrop-container">
-                <label class="backdrop-label">Phone</label>
+                <label class="backdrop-label" for="user-tel">Phone</label>
                 <div class="backdrop-input">
-                <input class="form-input" name="phone" />
-                <svg class="backdrop-items" width="18" height="18">
+                <input 
+                class="form-input" 
+                id="user-tel"
+                name="user-tel"
+                type="tel" 
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+                title="xxx-xxx-xx-xx"
+                required
+                />
+                <svg 
+                class="backdrop-items" 
+                width="18" 
+                height="18"
+                aria-label="icon-phone"
+                >
                     <use href="./images/icons.svg#icon-phoneblack"></use>
                 </svg>
                 </div>
                </div>
             <div class="backdrop-container">
-                <label class="backdrop-label">Email</label>
+                <label class="backdrop-label" for="user-email">Email</label>
                 <div class="backdrop-input">
-                    <input class="form-input" name="email" />
-                    <svg class="backdrop-items" width="18" height="18">
+                    <input 
+                    class="form-input" 
+                    id="user-email"
+                    name="iser-email" 
+                    type="email"
+                    required/>
+                    <svg 
+                    class="backdrop-items" 
+                    width="18" 
+                    height="18"
+                    aria-label="icon email">
                         <use href="./images/icons.svg#icon-emailblack"></use>
                     </svg>
                 </div>
             </div>
-            <div class="backdrop-container-textarea">
-                <label class="backdrop-label">Comment</label>
-                <textarea name="user-comment" placeholder="Text input" class="holder-text"></textarea>
+           <div class="backdrop-container-textarea">
+                <label class="backdrop-label" for="user-comment">Comment</label>
+                <textarea 
+                class="holder-text"
+                id="user-comment"
+                name="user-comment" 
+                placeholder="Text input" 
+                required
+                ></textarea>
             </div>
-
-
-
-
-            </form>
-
-            
+            <div class="comment-form-checkbox-wrapper">
+                <input 
+                class="comment-form-checkbox visually-hidden"
+                id="user-privacy-policy"
+                name="user-privacy-policy"
+                type="checkbox"
+                value="true"
+                required
+                />
+                <label class="checkbox-label" for="user-privacy-policy">
+                    <span class="comment-form-checkbox-label">
+                        <svg 
+                        class="comment-from-own-checkbox"
+                        width="10px"
+                        height="8px"
+                        aria-label="checkmark-icon"
+                        >
+                       <use href="./images/icons.svg#icon-vector"></use>
+                        </svg>
+                    </span>
+                    I accept the terms and conditions of the 
+                    <a class="comment-checkbox-text" href="">Privacy Policy</a>
+                    </label>
+                    </div>
+        <button class="comment-btn" type="submit">Send</button>
+            </form> 
         </div>
         </div>
 </body>
