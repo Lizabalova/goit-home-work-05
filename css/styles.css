@@ -780,18 +780,14 @@ margin-bottom: 8px;
 }
 .checkbox{
     margin-bottom: 24px;
-    display: flex;
 }
+
 .checkbox-label{
     color: #8E8F99;
     font-family: Roboto;
     font-size: 12px;
-    font-weight: 400;
-    line-height: 14px;
-    letter-spacing: 0.48px;
-    width: 338px;
-    position: absolute;
-    gap: 8px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
 }
 .comment-form-checkbox-label{
     display: inline-flex;
@@ -804,6 +800,11 @@ margin-bottom: 8px;
     cursor: pointer;
     fill: transparent;
     margin-right: 8px;
+    fill: transparent;
+}
+.comment-form-checkbox-wrapper{
+    margin-bottom: 24px;
+    display: flex;
 }
 .comment-from-own-checkbox {
     fill: #FFFFFF;
@@ -829,6 +830,9 @@ margin-bottom: 8px;
 {
 opacity: 1;
 }
+.form-input:focus + .backdrop-items{
+    stroke: #4D5AE5;
+}
 
 .comment-checkbox-text{
     color: #4D5AE5;
@@ -837,10 +841,27 @@ opacity: 1;
         font-weight: 400;
         line-height: 16px;
         letter-spacing: 0.48px;
-        text-decoration-line: underline;
+        text-decoration-line: underline;    
 }
 .comment-btn{
-    padding-left: 16px 32px;
-    margin-right: auto;
-    margin-left: auto;
+    display: block;
+    margin-left: 96px;
+    min-width: 169px;
+    height: 56px;
+    color:  #FFF;
+    text-align: center;
+    font-family: Roboto;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.64px;
+    border-radius: 4px;
+    background:  #4D5AE5;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    border: none;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.comment-btn:focus
+.comment-btn:hover
+{
+background-color: #404BBF;
 }
