@@ -686,18 +686,26 @@ background-color: #404BBF;
     border: 1px solid rgba(0, 0, 0, 0.1);
     padding: 0;
     cursor: pointer;
-    background-color: 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
-.close-button:hover
+
+.close-button:hover{
+background-color: #404BBF;
+    border: none;
+    fill: #FFFFFF;
+}
 .close-button:focus{
     background-color: #404BBF;
     border: none;
+    fill: #FFFFFF;
 }
+
 .backdrop-icon{
 transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .backdrop-text{
     color: #2E2F42;
         text-align: center;
