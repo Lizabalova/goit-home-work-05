@@ -571,9 +571,7 @@ align-items: baseline;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: 16px;
 margin-left: 80px;
-margin-bottom: 16px;
 }
 
 .subscribe-text{
@@ -584,6 +582,7 @@ margin-bottom: 16px;
         line-height: 24px;
         letter-spacing: 0.32px;
         color: #FFFFFF;
+        margin-bottom: 16px;
    
 }
 .subscribe-content{
@@ -686,14 +685,16 @@ background-color: #404BBF;
     border: 1px solid rgba(0, 0, 0, 0.1);
     padding: 0;
     cursor: pointer;
-    transition: background-color 250ms cubic-bezier(0.4,0,0.2,1); 
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 .close-button:hover{
     background-color: #404BBF;
+    border: none;
 }
 .backdrop-icon{
-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .backdrop-text{
     color: #2E2F42;
@@ -731,7 +732,7 @@ margin-bottom: 8px;
         width: 360px;
         padding-left: 38px;
         background-color: transparent;
-        outline: 0px solid transparent;
+        outline: transparent;
         transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
         
 
@@ -747,6 +748,11 @@ margin-bottom: 8px;
     fill: #2E2F42;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.backdrop-items:hover
+.backdrop-items:focus{
+    fill: #FFFFFF;
+}
+
 .form-input:focus + .backdrop-items{
     stroke: #2E2F42;
 }
@@ -828,7 +834,6 @@ margin-bottom: 8px;
 > .comment-form-checkbox-label{
     background-color: #404BBF;
     border:none;
-    fill: #F4F4FD;
 }
 
 .comment-form-checkbox:focus+
@@ -872,8 +877,8 @@ opacity: 1;
     background:  #4D5AE5;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     border: none;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .comment-btn:focus
 .comment-btn:hover
